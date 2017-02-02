@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>FTMS-Profile</title>
+		<link href="../library/css/front_page.css" rel="stylesheet" type="text/css">
+		<link href="../library/css/w3.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<script src="../library/js/jquery.js"></script>
+    		<script src="../logic/viewProfile.js"></script>
+	</head>
+		
+	<body>
+		<div class="w3-display-container w3-dark-grey" style="height: 50px; opacity: 0.9;">
+			<p class="w3-display-topleft w3-xxlarge" style="color: lightskyblue; width: 10%; text-align: center;">FTMS</p>
+			<input id="search" class="w3-display-topright w3-border w3-text-black" type="text" placeholder="Search Site" style="margin-top: 10px; margin-right: 85px; height: 50%;">
+			<button id="logout" class="w3-display-topright w3-hover-blue-grey w3-text-black w3-border" style="margin-top: 10px; margin-right: 5px; height: 50%;">LOG OUT</button>	
+		</div>
+		
+		<div id = "side-bar" class="w3-display-container w3-col l1 w3-dark-grey" style="height: 100vh; width: 10%; opacity: 0.9;">
+			<ul class="w3-ul w3-hoverable" style="color: white; text-align: center;">
+				<li id ="goProfile">PROFILE</li>
+				<li id ="goStaff">STAFF</li>
+				<li id ="goFood">FOOD</li>
+				<li id ="goEquipment">EQUIPMENT</li>
+				<li id ="goMenu">MENU</li>
+				<li id ="goOrder">ORDER</li>
+			</ul>
+		</div>
+		
+		<div id="datalist" class="w3-col l11 w3-container w3-myfont index-center w3-dark-grey w3-padding" style="opacity: 0.9; width: 60%; margin-left: 15%; margin-top: 8%; height:auto; position: relative;">
+			<div style="margin-top: 2%;">
+				<div class="w3-quarter 3-container w3-left-align" >
+					<img src="../resource/user.jpg" class="w3-round-medium" style="width: 80%;">
+				</div>
+				
+				<div class="w3-col l2 w3-left-align w3-margin-top">
+					<p>Staff ID:</p>
+					<p>Name:</p>
+					<p>Gender:</p>
+					<p>Age:</p>
+					<p>Position:</p>
+					<p>Contact Number:</p>
+				</div>
+				
+				<div class="w3-col l3 w3-left-align w3-margin-top">
+					<input class="w3-border w3-text-black" type="text" id="ID" style="margin-bottom: 2%;"></input>
+					<input class="w3-border w3-text-black" type="text" id="Name" style="margin-bottom: 2%;"></input>
+					<input class="w3-border w3-text-black" type="text" id="Gender" style="margin-bottom: 2%;"></input>
+					<input class="w3-border w3-text-black" type="text" id="Age" style="margin-bottom: 2%;"></input>
+					<input class="w3-border w3-text-black" type="text" id="Position" style="margin-bottom: 2%;"></input>
+					<input class="w3-border w3-text-black" type="text" id="Number" style="margin-bottom: 2%;"></input>
+				</div>
+				
+				<div class="w3-col l3 w3-left-align w3-margin-top">
+					<div id="idError" style="color: orange; height: 20px; margin-bottom: 10px;"></div>
+					<div id="nameError" style="color: orange; height: 20px; margin-bottom: 10px;"></div>
+					<div id="genderError" style="color: orange; height: 20px; margin-bottom: 10px;"></div>
+					<div id="ageError" style="color: orange; height: 20px; margin-bottom: 10px;"></div>
+					<div id="positionError" style="color: orange; height: 20px; margin-bottom: 10px;"></div>
+					<div id="numberError" style="color: orange; height: 20px; margin-bottom: 10px;"></div>
+				</div>	
+				
+				<div class="w3-col l1 w3-right-align w3-margin-top">
+					<button id="Edit" class="glyphicon glyphicon-pencil w3-hover-white w3-xxlarge w3-btn-floating-large w3-border"></button>
+				</div>
+				
+			</div>
+			
+			<div class="w3-col l12 w3-myfont w3-centered  w3-margin-top">
+				<p class="w3-xlarge" style="color: white; padding-top: 15px;">WEEKLY SCHEDULE</p>
+			</div>
+			
+			<div class="w3-col l2 w3-margin-top"></div>
+			
+			<div class="w3-col l2 w3-margin-top">Monday</div>
+			
+			<div class="w3-col l2 w3-margin-top">Tuesday</div>
+			
+			<div class="w3-col l2 w3-margin-top">Wednesday</div>
+			
+			<div class="w3-col l2 w3-margin-top">Thursday</div>
+			
+			<div class="w3-col l2 w3-margin-top">Friday</div>
+			
+			
+			<table class="w3-table">
+				<tr>
+				    <td class="w3-large">09:00-10:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">10:00-11:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">11:00-12:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">12:00-13:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">13:00-14:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">14:00-15:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">15:00-16:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">16:00-17:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">17:00-18:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">18:00-19:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">19:00-20:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">20:00-21:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+		        
+		        <tr>
+				    <td class="w3-large">21:00-22:00</td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		            <td>
+		                <div class="timebox" style="width: 100%;"></div>
+		            </td>
+		        </tr>
+	        </table>
+	       
+	        <div class="w3-right-align w3-medium" style="margin-bottom: 20px;">
+	        	<img src="../resource/blue.jpg" style="width: 3%;"/> available
+	        	<img class="w3-right-align" src="../resource/green.jpg" style="width: 3%;"/> not available
+	        </div>
+	        
+	        <button id="change" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%;margin-bottom: 6%; margin-right: 2%; background-color: lightgray;">SUBMIT CHANGE</button>
+			<button id="cancel" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%;margin-bottom: 6%; margin-left: 2%; background-color: lightgray;">CANCEL</button>
+		</div>
+		<script>
+			initial();
+			console.log(getDate(0));
+		</script>
+	</body>
+</html>
+
+

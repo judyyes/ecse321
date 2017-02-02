@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FTMS-ORDER'S DETAIL</title>
+		<link href="../library/css/front_page.css" rel="stylesheet" type="text/css">
+		<link href="../library/css/w3.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<script src="../library/js/jquery.js"></script>
+		<script src="../logic/listSingleOrder.js"></script>
+	</head>
+	
+	<body>
+		<div class="w3-display-container w3-dark-grey" style="height: 50px; opacity: 0.9;">
+			<p class="w3-display-topleft w3-xxlarge" style="color: lightskyblue; width: 10%; text-align: center;">FTMS</p>
+			<input id="search" class="w3-display-topright w3-border w3-text-black" type="text" placeholder="Search Site" style="margin-top: 10px; margin-right: 85px; height: 50%;">
+			<button id="logout" class="w3-display-topright w3-hover-blue-grey w3-text-black w3-border" style="margin-top: 10px; margin-right: 5px; height: 50%;">LOG OUT</button>	
+		</div>
+		
+		<div id = "side-bar" class="w3-display-container w3-col l1 w3-dark-grey" style="height: 100vh; width: 10%; opacity: 0.9;">
+			<ul class="w3-ul w3-hoverable" style="color: white; text-align: center;">
+				<li id ="goProfile">PROFILE</li>
+				<li id ="goStaff">STAFF</li>
+				<li id ="goFood">FOOD</li>
+				<li id ="goEquipment">EQUIPMENT</li>
+				<li id ="goMenu">MENU</li>
+				<li id ="goOrder">ORDER</li>
+			</ul>
+		</div>
+		
+		<div id="datalist" class="w3-col l11 w3-container w3-myfont index-center w3-dark-grey w3-padding" style="opacity: 0.9; width: 60%; margin-left: 15%; margin-top: 8%; height:auto; position: relative;">
+			<p class="w3-xlarge" style="color: white; padding-top: 15px;">ORDER</p>
+			<div style="margin-left: 3%; margin-top: 3%;">
+				<div class="w3-col l2 w3-center w3-dark-grey">
+					<p>Order ID:</p>
+				</div>
+				<div class="w3-col l8 w3-dark-grey w3-left-align">
+					<p id="orderID">1234567890</p>
+				</div>
+			</div><br>
+			
+			<div style="margin-left: 3%; margin-top: 4%;">
+				<div class="w3-col l2 w3-center w3-dark-grey">
+					<p>Order Status:</p>
+				</div>
+				
+				<div class="w3-col l4 w3-dark-grey w3-left-align">
+					<p id="orderStatus">In process</p>
+				</div>
+			</div><br>
+			
+			<div style="margin-left: 3%; margin-top: 4%;">
+				<div class="w3-col l2 w3-center w3-dark-grey">
+					<p>Order Menu:</p>
+				</div>
+			</div><br>
+			
+			
+			<div class="w3-col l8">
+				<table class="w3-table w3-border w3-bordered w3-centered" >
+					<tr>
+				        <th>Menu</th>
+				        <th>Quantity</th>
+				    </tr>
+				    <!--<tr>
+					    <td>Fries</td>
+					    <td>1</td>
+					    </tr>
+				    <tr>
+				        <td>Coke</td>
+				        <td>2</td>
+				    </tr>-->
+				</table>
+			</div>	
+			<br>
+			<div class="w3-col l12 w3-margin-bottom">
+			<button id="cancel" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%; margin-left: 2%; background-color: lightgray;">BACK</button>
+			</div>		
+		</div>
+		<script>
+			initial();
+		</script>
+	</body>
+</html>

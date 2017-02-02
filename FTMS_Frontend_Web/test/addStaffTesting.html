@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>FTMS JS Unit Test</title>
+		
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+		<script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+		<script src="../library/js/jquery.js"></script>
+		<script src="../logic/addStaff.js"></script>
+	</head>
+	<body>
+		<div id="qunit"></div>
+		<!--Unit Test-->
+		<script>
+		// test add staff
+			QUnit.test("validation testing", function(assert) {
+				// add staff successfully
+				assert.equal(validate("jack", "male", "18", "Cook", "5147782788", "jack", "123456789"),true);
+				// name is empty	
+				assert.equal(validate("", "male", "18", "cook", "5147782788", "jack", "jackisacook"),false);
+				// age is zero
+				assert.equal(validate("jack", "male", "0", "cook", "5147782788", "jack", "jackisacook"),false);
+				// position invalid
+				assert.equal(validate("jack", "male", "18", "sss", "5147782788", "jack", "jackisacook"),false);
+				// password too short
+				assert.equal(validate("jack", "male", "18", "cook", "5147782788", "jack", "123"),false);
+				// age is empty
+				assert.equal(validate("jack", "male", "", "cook", "5147782788", "jack", "jackisacook"),false);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FTMS-ADD EQUIPMENT</title>
+		<link href="../library/css/front_page.css" rel="stylesheet" type="text/css">
+		<link href="../library/css/w3.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<script src="../library/js/jquery.js"></script>
+		<script src="../logic/addEquipment.js"></script>
+	</head>
+	
+	<body>
+		<div class="w3-display-container w3-dark-grey" style="height: 50px; opacity: 0.9;">
+			<p class="w3-display-topleft w3-xxlarge" style="color: lightskyblue; width: 10%; text-align: center;">FTMS</p>
+			<input id="search" class="w3-display-topright w3-border w3-text-black" type="text" placeholder="Search Site" style="margin-top: 10px; margin-right: 85px; height: 50%;">
+			<button id="logout" class="w3-display-topright w3-hover-blue-grey w3-text-black w3-border" style="margin-top: 10px; margin-right: 5px; height: 50%;">LOG OUT</button>	
+		</div>
+		
+		<div id = "side-bar" class="w3-display-container w3-col l1 w3-dark-grey" style="height: 100vh; width: 10%; opacity: 0.9;">
+			<ul class="w3-ul w3-hoverable" style="color: white; text-align: center;">
+				<li id ="goProfile">PROFILE</li>
+				<li id ="goStaff">STAFF</li>
+				<li id ="goFood">FOOD</li>
+				<li id ="goEquipment">EQUIPMENT</li>
+				<li id ="goMenu">MENU</li>
+				<li id ="goOrder">ORDER</li>
+			</ul>
+		</div>
+		
+		<div class="w3-col l11 w3-container w3-myfont index-center w3-dark-grey w3-padding" style="opacity: 0.9; width: 60%; margin-left: 15%; margin-top: 8%; height:auto; position: relative;">
+			<p class="w3-xlarge" style="color: white; padding-top: 15px;">EQUIPMENT INFO</p>
+			<div style="margin-left: 3%; margin-top: 3%;">
+				<div class="w3-col l1 w3-center w3-dark-grey">
+					<p>Name:</p>
+				</div>
+				<div class="w3-col l4 w3-dark-grey">
+					<input id="name" class="w3-text-black" type="text" style="width: 80%;">
+				</div>
+				<div class="w3-col l5 w3-dark-grey w3-left-align">
+					<span id="nameError" style="color: orange;"></span>
+				</div>
+			</div><br>
+			
+			<div style="margin-left: 3%; margin-top: 4%;">
+				<div class="w3-col l1 w3-center w3-dark-grey">
+					<p>Quantity:</p>
+				</div>
+				<div class="w3-col l4 w3-dark-grey">
+					<input id="quantity" class="w3-text-black" type="text" style="width: 80%;">
+				</div>
+				<div class="w3-col l5 w3-dark-grey w3-left-align">
+					<span id="quantityError" style="color: orange;"></span>
+				</div>
+			</div><br>
+			
+			<div style="margin-left: 3%; margin-top: 4%;">
+				<div class="w3-col l1 w3-center w3-dark-grey">
+					<p>Price:</p>
+				</div>
+				<div class="w3-col l4 w3-dark-grey">
+					<input id="price" class="w3-text-black" type="text" style="width: 80%;">
+				</div>
+				<div class="w3-col l5 w3-dark-grey w3-left-align">
+					<span id="priceError" style="color: orange;"></span>
+				</div>
+			</div><br>
+			
+			<div style="margin-left: 3%; margin-top: 4%;">
+				<div class="w3-col l1 w3-center w3-dark-grey">
+					<p>Note:</p>
+				</div>
+				
+			</div><br>
+			<textarea class="w3-text-black" rows="5" cols="50" style="width: 82%; height: 40%;">
+			</textarea>
+					
+			<button id="change" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%;margin-bottom: 6%; background-color: lightgray;">SUBMIT CHANGE</button>
+			<button id="cancel" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%;margin-bottom: 6%; margin-left: 2%; background-color: lightgray;">CANCEL</button>
+		</div>
+		<script>
+			initial();
+		</script>
+	</body>
+</html>

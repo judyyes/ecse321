@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>FTMS JS Unit Test</title>
+		
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+		<script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+		<script src="../library/js/jquery.js"></script>
+		<script src="../logic/viewProfile.js"></script>
+	</head>
+	<body>
+		<div id="qunit"></div>
+		<!--Unit Test-->
+		<script>
+			QUnit.test("date shift testing", function(assert) {
+				// change the string to the date of Monday of this week
+				assert.equal(getDate(0),"2016-11-28");
+			});
+			// test display profile
+			QUnit.test("validation testing", function(assert) {
+				// display profile successfully
+				assert.equal(validate("abc","male","18","Manager","911"),true);
+				// position invalid
+				assert.equal(validate("abc","male","18","sss","911"),false);
+				// phone number is empty
+				assert.equal(validate("abc","male","18","Cook",""),false);
+				// gender invalid
+				assert.equal(validate("abc","unknown","18","Manager","911"),false);
+				// age is zero
+				assert.equal(validate("abc","male","0","Manager","911"),false);
+			});
+		</script>
+	</body>
+</html>

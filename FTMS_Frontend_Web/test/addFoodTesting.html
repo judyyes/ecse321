@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>FTMS JS Unit Test</title>
+		
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.0.1.css">
+		<script src="https://code.jquery.com/qunit/qunit-2.0.1.js"></script>
+		<script src="../library/js/jquery.js"></script>
+		<script src="../logic/addFood.js"></script>
+	</head>
+	<body>
+		<div id="qunit"></div>
+		<!--Unit Test-->
+		<script>
+		// test add food
+			QUnit.test("validation testing", function(assert) {
+				// add food successfully
+				assert.equal(validate("banana","10","1.2"),true);
+				// food name is empty	
+				assert.equal(validate("","10","1.2"),false);
+				// quantity is negative
+				assert.equal(validate("banana","-1","1.2"),false);
+				// price is negative
+				assert.equal(validate("banana","10","-1"),false);
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FTMS-EQUIPMENT</title>
+		<link href="../library/css/front_page.css" rel="stylesheet" type="text/css">
+		<link href="../library/css/w3.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<script src="../library/js/jquery.js"></script>
+    		<script src="../logic/listEquipment.js"></script>
+	</head>
+		
+	<body>
+		<div class="w3-display-container w3-dark-grey" style="height: 50px; opacity: 0.9;">
+			<p class="w3-display-topleft w3-xxlarge" style="color: lightskyblue; width: 10%; text-align: center;">FTMS</p>
+			<input id="search" class="w3-display-topright w3-border w3-text-black" type="text" placeholder="Search Site" onkeyup="searchEquip()" style="margin-top: 10px; margin-right: 85px; height: 50%;">
+			<button id="logout" class="w3-display-topright w3-hover-blue-grey w3-text-black w3-border" style="margin-top: 10px; margin-right: 5px; height: 50%;">LOG OUT</button>	
+		</div>
+		
+		<div id = "side-bar" class="w3-display-container w3-col l1 w3-dark-grey" style="height: 100vh; width: 10%; opacity: 0.9;">
+			<ul class="w3-ul w3-hoverable" style="color: white; text-align: center;">
+				<li id ="goProfile">PROFILE</li>
+				<li id ="goStaff">STAFF</li>
+				<li id ="goFood">FOOD</li>
+				<li id ="goEquipment">EQUIPMENT</li>
+				<li id ="goMenu">MENU</li>
+				<li id ="goOrder">ORDER</li>
+			</ul>
+		</div>
+		
+		<div id="datalist" class="w3-col l11 w3-container w3-myfont index-center w3-dark-grey" style="opacity: 0.9; width: 60%; margin-left: 15%; margin-top: 8%; position: relative; height: auto;">			
+			<p class="w3-xlarge" style="color: white; padding-top: 15px;">EQUIPMENT SUPPLY</p>
+			<div style="margin-top: 3%;">
+				<div class="w3-quarter 3-container w3-myfont w3-text-white w3-border-bottom">
+					<i class="glyphicon glyphicon-plus w3-hover-black"></i>
+	    			Equipment
+				</div>
+				
+				<div class="w3-quarter 3-container w3-myfont w3-text-white w3-border-bottom">
+	    			Quantity
+				</div>
+				
+				<div class="w3-quarter 3-container w3-myfont w3-text-white w3-border-bottom">
+	    			Price
+				</div>
+				
+				<div class="w3-quarter 3-container w3-myfont w3-text-white w3-border-bottom">
+	    			Modify
+				</div>
+				<br>
+				<table class="w3-table" style="margin-bottom: 5%;">
+				</table>
+			</div>
+			
+			
+		</div>
+		<script>
+		    initial();
+		</script>
+	</body>
+</html>

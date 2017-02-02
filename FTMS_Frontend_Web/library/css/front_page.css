@@ -1,0 +1,70 @@
+body {
+	background-image: url(../../resource/background.jpg);
+	background-repeat: repeat-y;
+	background-size: auto;
+}
+
+.index-center {
+    position:absolute;
+    margin: auto;
+    left: 0; right: 0; top: 0; bottom: 0;
+    height: 550px;
+    width: 900px;
+    text-align: center;
+    font-weight: 300;
+}
+
+.button {
+	display: inline-block;
+    background-color: #f4511e;
+    border: none;
+    color: #FFFFFF;
+    width: 180px;
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+    cursor: pointer;
+    border-radius: 16px;
+}
+.button span {
+ 	cursor: pointer;
+  	display: inline-block;
+  	position: relative;
+  	transition: 0.5s;
+}
+.button span:after {
+  	content: '>>';
+  	position: absolute;
+  	opacity: 0;
+  	top: 0;
+  	right: -10px;
+  	transition: 0.5s;
+}
+.button:hover span {
+  	padding-right: 45px;
+}
+.button:hover span:after {
+  	opacity: 1;
+  	right: 0;
+}
+
+.timebox{
+	border-radius: 5px;
+	height: 40px;
+    background-color: rgb(255, 255, 255);
+    margin-top: -4px;
+}
+
+table {
+    table-layout: fixed;
+}
+
+.w3-ul, .glyphicon {
+	cursor: pointer;
+}
+
+.underline {
+	text-decoration: underline;
+	cursor: pointer;
+}
+

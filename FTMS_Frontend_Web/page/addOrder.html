@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>FTMS-ADD ORDER</title>
+		<link href="../library/css/front_page.css" rel="stylesheet" type="text/css">
+		<link href="../library/css/w3.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		
+		<script src="../library/js/jquery.js"></script>
+		<script src="../logic/addOrder.js"></script>
+	</head>
+	
+	<body>
+		<div class="w3-display-container w3-dark-grey" style="height: 50px; opacity: 0.9;">
+			<p class="w3-display-topleft w3-xxlarge" style="color: lightskyblue; width: 10%; text-align: center;">FTMS</p>
+			<input id="search" class="w3-display-topright w3-border w3-text-black" type="text" placeholder="Search Site" style="margin-top: 10px; margin-right: 85px; height: 50%;">
+			<button id="logout" class="w3-display-topright w3-hover-blue-grey w3-text-black w3-border" style="margin-top: 10px; margin-right: 5px; height: 50%;">LOG OUT</button>	
+		</div>
+		
+		<div id = "side-bar" class="w3-display-container w3-col l1 w3-dark-grey" style="height: 100vh; width: 10%; opacity: 0.9;">
+			<ul class="w3-ul w3-hoverable" style="color: white; text-align: center;">
+				<li id ="goProfile">PROFILE</li>
+				<li id ="goStaff">STAFF</li>
+				<li id ="goFood">FOOD</li>
+				<li id ="goEquipment">EQUIPMENT</li>
+				<li id ="goMenu">MENU</li>
+				<li id ="goOrder">ORDER</li>
+			</ul>
+		</div>
+		
+		<div id="datalist" class="w3-col l11 w3-container w3-myfont index-center w3-dark-grey w3-padding" style="opacity: 0.9; width: 60%; margin-left: 15%; margin-top: 8%; height:auto; position: relative;">
+			<p class="w3-xlarge w3-margin-bottom" style="color: white; padding-top: 15px;">ORDER INFO</p>
+			 <div style="margin-top: 4%;">
+				<div class="w3-col l3 w3-dark-grey">
+					<p>ORDER ID :</p> 
+				</div>
+				
+				<div class="w3-col l2 w3-dark-grey">
+					<p id="orderID"></p>
+				</div>
+				
+				<div class="w3-col l3 w3-dark-grey">
+					<p>STATUS : </p>
+				</div>
+				<div class="w3-col l2 w3-dark-grey w3-left-align">
+					<select id="status"  class="w3-select w3-border" name="option" style="padding: 4px 0;">
+						<option value="" disabled selected>Choose status</option>
+						<option value="0">In process</option>
+						<option value="1">Completed</option>
+					</select> 
+				</div>
+			</div><br>
+			
+			<div style="margin-top: 2%;">
+				<div class="w3-col l3 w3-center w3-dark-grey"><p></p></div>
+				<div class="w3-col l2 w3-dark-grey w3-left-align"><p></p></div>
+				<div class="w3-col l3 w3-center w3-dark-grey"><p></p></div>
+				<div class="w3-col l4 w3-dark-grey w3-left-align">
+					<p id="statusError" style="color: orange;"></p>
+				</div>
+			</div><br>
+			
+			<div style="margin-top: 2%;">
+				<div class="w3-col l3 w3-dark-grey">
+						<p>DISHES :</p> 
+				</div>
+				
+				<div class="w3-col l2 w3-dark-grey w3-left-align">
+					<select id="dishes" class="w3-select w3-border" name="option" style="padding: 4px 0;">
+						<option value="" disabled selected>Choose dishes</option>
+						<!--<option value="1">fries</option>-->
+					</select>
+				</div>
+				
+				<div class="w3-col l3 w3-dark-grey">
+					<p>QUANTITY : </p> 
+				</div>
+				
+				<div class="w3-col l2 w3-dark-grey w3-left-align">
+					<input id="dishesQuan" class="w3-border w3-text-black" type="text" style="width: 20%; height: 12%; margin-left: 3%;"/> 
+				</div>
+				
+				<div class="w3-col l2 w3-dark-grey">
+					<i class="glyphicon glyphicon-plus w3-hover-black"></i>
+				</div>	
+			</div><br>
+			
+			<div style="margin-top: 2%;">
+				<div class="w3-col l3 w3-center w3-dark-grey"><p></p></div>
+				<div class="w3-col l2 w3-dark-grey w3-left-align">
+					<p id="dishesError" style="color: orange;"></p>
+				</div>
+				<div class="w3-col l3 w3-center w3-dark-grey"><p></p></div>
+				<div class="w3-col l4 w3-dark-grey w3-left-align">
+					<p id="quantityError" style="color: orange;"></p>
+				</div>
+			</div><br>
+			
+			<table class="w3-table-all w3-text-black w3-centered" style="margin-top: 3%;">
+			    <thead>
+			      <tr class="w3-light-grey">
+			        <th>Dishes</th>
+			        <th>Quantity</th>
+			        <th>Delete</th>
+			      </tr>
+			    </thead>
+			    <!--<tr>
+			      <td>Fries</td>
+			      <td>1</td>
+			      <td><i class="glyphicon glyphicon-trash w3-hover-black"></i></td>
+			    </tr>
+			    <tr>
+			      <td>Coke</td>
+			      <td>2</td>
+			      <td><i class="glyphicon glyphicon-trash w3-hover-black"></i></td>
+			    </tr>-->
+			</table>
+			
+			<button id="change" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%;margin-bottom: 6%; margin-right: 2%; background-color: lightgray;">SUBMIT CHANGE</button>
+			<button id="cancel" class="w3-hover-text-brown w3-hover-shadow w3-text-black w3-border" style="height: 5%; margin-top: 3%;margin-bottom: 6%; margin-left: 2%; background-color: lightgray;">CANCEL</button>
+		</div>
+		<script>
+			initial();
+		</script>
+	</body>
+</html>
